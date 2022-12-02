@@ -22,7 +22,7 @@ while True:
             print("file missing")
             with open(f"/home/icomera/{sap}.txt", "w") as f:
                 f.close()
-        with open(f"{sap}.txt") as file:
+        with open(f"/home/icomera/{sap}.txt") as file:
             if output in file.read():
                 exists = True
                 #print("iccid exists in file")
@@ -31,7 +31,7 @@ while True:
                 exists = False
                 file.close()
         if exists == False:
-            f = open(f'{sap}.txt', 'a')
+            f = open(f'/home/icomera/{sap}.txt', 'a')
             f.write(output+"\n")
             f.close()
             print(f"Wrote ICCID {output} to file")
